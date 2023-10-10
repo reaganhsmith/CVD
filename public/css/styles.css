@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
 
 :root{
-  --primary-color: #442C20;
+  --primary-color: #5e3c2b;
   --secondary-color: rgb(197, 169, 150);
-  --light-color: #fff9f6;
+  --light-color: #f4f1f0;
   --font-fam: 'Lato', sans-serif;;
 }
 
 html{
   background-color: var(--light-color);
+  font-family: var(--font-fam);
+}
+
+h1, h2, h3, h4, h5, p{
+  color: var(--primary-color);
 }
 
 
@@ -88,6 +93,41 @@ i.menuIcon, i.closeIcon {
   z-index: 101; 
 }
 
+/*------------ SERVICES SECTION -----------*/
+.listService{
+  display: flex;
+  flex-direction: column;
+}
+
+.listService img{
+  width: 70%;
+  border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+}
+
+.listService ul li{
+  padding: 1rem;
+  list-style: none;
+  color: var(--primary-color);
+}
+
+h2{
+  text-align: center;
+  font-size: 32px;
+}
+
+.services{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+
 
   /*-------- MEDIA QUERY FOR LAGER SCREEN --------*/
   @media only screen and (min-width: 650px) {
@@ -133,4 +173,26 @@ i.menuIcon, i.closeIcon {
       width: 60%;
       order: 1;
     }
+
+
+    /*----------- Services List  ----------*/
+
+    .listService{
+      flex-direction: row;
+      justify-content: center;
+      gap: 4rem;
+    }
+
+    h2{
+      font-size: 42px;
+    }
+
+    .listService img{
+      width: 30%;
+      margin: 0;
+    }
+
+
+  
+
   }
