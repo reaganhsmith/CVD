@@ -3,8 +3,12 @@
 :root{
   --primary-color: #442C20;
   --secondary-color: rgb(197, 169, 150);
-  --light-color: #FCEFE8;
+  --light-color: #fff9f6;
   --font-fam: 'Lato', sans-serif;;
+}
+
+html{
+  background-color: var(--light-color);
 }
 
 
@@ -101,7 +105,7 @@ i.menuIcon, i.closeIcon {
       width: auto; 
       height: auto; 
       background-color: transparent; 
-      grid-column: 2 / span 1;
+      order: 2;
       font-size: 26px;
       padding-left: 2rem;
     }
@@ -120,22 +124,13 @@ i.menuIcon, i.closeIcon {
     }
 
     .hero{
-      display: grid;
-      grid-template-columns: 3fr 1fr;
+      display: flex;
       align-items: start;
       justify-content: center;
     }
 
     .hero img{
-      width: 100%;
-      grid-row: 1 / span 1;
-    }
-  }
-
-  @media only screen and (min-width: 1000px) {
-
-    .hero{
-      grid-template-columns: 1.5fr 1fr;
-      justify-content: center;
+      width: 60%;
+      order: 1;
     }
   }
