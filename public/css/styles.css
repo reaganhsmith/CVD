@@ -336,7 +336,7 @@ footer img{
 
 /*---------- REVIEW SECTION ----------*/
     .indvReview:nth-of-type(5), .indvReview:nth-of-type(6){
-      display: block;
+      display: inline-block;
     }
 
 
@@ -350,10 +350,18 @@ footer img{
       text-align: center;
       padding: 14px;
       text-decoration: none;
+      
+      }
+
+      .indvReview:nth-of-type(1){
+        margin-left: 28rem;
       }
 
     .indvReview p{
-      width: 300px;
+      width: 200px;
+      text-align: left;
+      margin: 0 3rem;
+      overflow: hidden;
     }
 
 
