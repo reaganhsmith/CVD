@@ -10,6 +10,7 @@ const express = require("express")
 const env = require("dotenv").config()
 const app = express()
 const static = require("./routes/static")
+const reviewController = require("./controllers/reviewController")
 
 
 /* ***********************
@@ -25,9 +26,7 @@ app.set("layout", "./layouts/layout")
  *************************/
 app.use(static)
 
-app.get("/", function(req, res){
-  res.render("index", {title: "Home"})
-})
+app.get("/", reviewController.buildByReview)
 
 /* ***********************
  * Local Server Information
