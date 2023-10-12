@@ -2,7 +2,7 @@
 
 :root{
   --primary-color: #5e3c2b;
-  --secondary-color: rgb(197, 169, 150);
+  --secondary-color: rgb(237, 214, 199);
   --light-color: #f4f1f0;
   --font-fam: 'Lato', sans-serif;;
 }
@@ -18,8 +18,6 @@ h1, h2, h3, h4, h5, p{
 
 
 svg {
-  fill: #acabab;
-  stroke-width: 0px;
   width: 5rem;
 }
 
@@ -28,6 +26,10 @@ svg {
   margin-left: auto;
   margin-right: auto;
   width: 70%;
+}
+
+.hero img{
+  width: 100%;
 }
 
 header{
@@ -132,6 +134,7 @@ h2{
 }
 
 
+
 /*------- CURRENT OFFERS --------*/
 .currDeals{
   background-image: url("../images/dentalOffice.jpg");
@@ -147,10 +150,17 @@ h2{
 .offer{
   background-color: var(--light-color);
   margin: 3rem;
-  padding: 0 3rem;
+  padding: 2rem 3rem;
+  text-align: center;
+  box-shadow: 5px 5px 20px var(--light-color);
 }
 .specials{
   margin: 1rem 5rem;
+}
+
+.offer h4{
+  font-size: 50px;
+  margin: 0;
 }
 
 
