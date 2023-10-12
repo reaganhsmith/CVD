@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "pgOptions": {
+                "ssl": true
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "driver": "PostgreSQL",
+            "name": "render.com",
+            "connectString": "postgres://reaganhouser:AcyCJgrLiIjNVkOxAHROEJcRo7niLl8a@dpg-ckk4snekpues73d3qsag-a.oregon-postgres.render.com/rhdentalsite"
+        }
+    ]
+}
