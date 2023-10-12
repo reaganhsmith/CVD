@@ -2,7 +2,7 @@
 
 :root{
   --primary-color: #5e3c2b;
-  --secondary-color: rgb(237, 214, 199);
+  --secondary-color: rgb(197, 158, 133);
   --light-color: #f4f1f0;
   --font-fam: 'Lato', sans-serif;;
 }
@@ -163,6 +163,28 @@ h2{
   margin: 0;
 }
 
+.offer h3{
+  font-size: 24px;
+}
+.offer p{
+  font-size: 18px;
+}
+
+.offer button{
+  padding: 1rem;
+  font-size: 18px;
+  background-color: transparent;
+  border: solid 2px var(--primary-color);
+}
+
+.offer button a{
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+.offer button a:hover{
+  text-decoration: underline;
+}
 
 
   /*-------- MEDIA QUERY FOR LAGER SCREEN --------*/
@@ -246,8 +268,19 @@ h2{
     
     .offer{
       margin: 5rem;
+      padding: 2rem;
     }
-    
-  
+
+    .offer h4{
+      font-size: 65px;
+    }
+
+    .offer h3{
+      font-size: 30px;
+    }
+    .offer p{
+      font-size: 24px;
+    }
+
 
   }
