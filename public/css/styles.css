@@ -185,6 +185,16 @@ h2{
 }
 
 /*---------- REVIEW SECTION ----------*/
+.review {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  overflow: scroll;
+}
+
+.indvReview{
+  width: 400px;
+}
 
 /*------- Footer --------*/
 
@@ -321,3 +331,5 @@ footer img{
       width: 20%;
     }
   }
+
+
