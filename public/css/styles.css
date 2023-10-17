@@ -196,6 +196,27 @@ h2{
   width: 400px;
 }
 
+/*------- Map and contact --------*/
+iframe{
+  width: 100%;
+}
+
+.info{
+  background-color: var(--secondary-color);
+  text-align: center;
+  padding: 2rem;
+  margin: 0 3rem;
+}
+
+.info a {
+  color: var(--primary-color);
+  font-size: 15px;
+ padding: 4rem;
+}
+
+.info a:hover{
+  color: var(--light-color);
+}
 /*------- Footer --------*/
 
 footer{
