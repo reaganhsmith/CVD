@@ -187,16 +187,18 @@ h2{
 /*---------- REVIEW SECTION ----------*/
 .review {
   display: flex;
-  justify-content: space-around;
   flex-wrap: nowrap;
   overflow: scroll;
   background-color: var(--secondary-color);
+  margin: 1rem;
 
 }
 
 .indvReview{
+  width: 700px;
+  height: 450px;
   background-color: var(--light-color);
-  margin: 2rem;
+  margin: 1rem;
   padding: 2rem;
 }
 
@@ -337,7 +339,9 @@ footer img{
 
 
 /*---------- REVIEW SECTION ----------*/
-  
+  .review{
+      margin: 6rem;
+  }
 
 
 /*---------- CONTACT SECTION ----------*/
@@ -348,6 +352,11 @@ footer img{
   margin: 2rem;
   align-items: center;
   margin: 1rem 5rem;
+  
+}
+
+.connect p, .connect a{
+font-size: 18px;
 }
 /*---------- FOOTER ----------*/
     footer{
