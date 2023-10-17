@@ -190,10 +190,14 @@ h2{
   justify-content: space-around;
   flex-wrap: nowrap;
   overflow: scroll;
+  background-color: var(--secondary-color);
+
 }
 
 .indvReview{
-  width: 400px;
+  background-color: var(--light-color);
+  margin: 2rem;
+  padding: 2rem;
 }
 
 /*------- Map and contact --------*/
@@ -202,7 +206,6 @@ iframe{
 }
 
 .info{
-  background-color: var(--secondary-color);
   text-align: center;
   padding: 2rem;
   margin: 0 3rem;
@@ -215,7 +218,7 @@ iframe{
 }
 
 .info a:hover{
-  color: var(--light-color);
+  color: var(--secondary-color);
 }
 /*------- Footer --------*/
 
@@ -337,6 +340,15 @@ footer img{
   
 
 
+/*---------- CONTACT SECTION ----------*/
+
+
+.connect{
+  display: flex;
+  margin: 2rem;
+  align-items: center;
+  margin: 1rem 5rem;
+}
 /*---------- FOOTER ----------*/
     footer{
       display: flex;
