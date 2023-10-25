@@ -244,9 +244,58 @@ footer img{
 /*------- TEAMS PAGE --------*/
 /*------- DENTISTS SECTIONS --------*/
 
+.doctorInfo {
+  display: flex;
+  flex-direction: column;
+  margin:3rem 4rem;
+  align-items: center;
+  gap: 3rem;
+}
 
 
+.doctorInfo p{
+  text-indent: 3rem;
+}
 
+.aboutDoc{
+  width: 80%;
+  height: 300px;
+  padding: 0 1rem;
+  border: solid 2px var(--light-color);
+  border-radius: 15px;
+  overflow: auto;
+}
+
+.docPhoto img{
+  height: 400px;
+  box-shadow: 2px 2px 20px #968783;
+  z-index: 100;
+}
+
+.doc{
+  background-color: var(--secondary-color);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -2rem;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.cvdInfo{
+  margin: 2rem;
+}
+
+.cvdInfo h3{
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 24px;
+}
+
+.cvdInfo img{
+  width: 100%;
+}
 
   /*-------- MEDIA QUERY FOR LAGER SCREEN --------*/
   @media only screen and (min-width: 650px) {
@@ -378,6 +427,30 @@ font-size: 18px;
     footer img{
       width: 20%;
     }
+
+
+    .cvdInfo{
+      margin: 2rem;
+    }
+    
+    .cvdInfo h3{
+      text-align: center;
+      color: var(--primary-color);
+      font-size: 24px;
+    }
+    
+    .cvdInfo img{
+      width: 500px;
+    }
   }
 
 
+  @media only screen and (min-width: 1000px) {
+
+    .hero img{
+      width: 900px;
+    }
+
+
+
+  }
