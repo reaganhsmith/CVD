@@ -10,7 +10,7 @@ const express = require("express")
 const env = require("dotenv").config()
 const app = express()
 const static = require("./routes/static")
-const reviewController = require("./controllers/reviewController")
+const siteController = require("./controllers/siteController")
 
 
 /* ***********************
@@ -26,7 +26,9 @@ app.set("layout", "./layouts/layout")
  *************************/
 app.use(static)
 
-app.get("/", reviewController.buildByReview)
+app.get("/", siteController.buildByReview)
+
+app.get("/team", siteController.buildTeam)
 
 /* ***********************
  * Local Server Information

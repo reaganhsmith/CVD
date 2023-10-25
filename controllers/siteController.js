@@ -9,8 +9,17 @@ async function buildByReview(req, res, next){
       })
 }
 
+
+async function buildTeam(req, res, next){
+
+    res.render("./team/index", {
+      })
+} 
+
+
 module.exports = {
-    buildByReview
+    buildByReview,
+    buildTeam
 }
 
 
