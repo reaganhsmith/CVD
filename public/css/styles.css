@@ -17,6 +17,7 @@ h1, h2, h3, h4, h5, p{
 }
 
 
+
 svg {
   width: 5rem;
 }
@@ -266,10 +267,22 @@ footer img{
   overflow: auto;
 }
 
+.aboutDoc::-webkit-scrollbar:vertical {
+  width: 10px;
+}
+
+.aboutDoc::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.aboutDoc::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: var(--light-color)
+}
+
 .docPhoto img{
   height: 400px;
   box-shadow: 2px 2px 20px #968783;
-  z-index: 100;
 }
 
 .doc{
@@ -442,15 +455,50 @@ font-size: 18px;
     .cvdInfo img{
       width: 500px;
     }
+
+
+
+    .doctorInfo{
+      flex-direction: row;
+      gap: 0;
+      align-items: flex-end;
+      padding: 0;
+      margin: 3rem 2rem;
+    }
+
+    .doc{
+      height: 400px;
+      padding: 0 2rem;
+      margin-bottom: 3px;
+      border-radius: 0 15px 15px 0;
+      
+    }
+
+    .aboutDoc{
+      width: 100%;
+      height: 300px;
+      overflow: auto;
+      border: none;
+     
+    }
+
+    .docPhoto img{
+      height: 400px;
+      box-shadow: none;
+      border-radius:  15px 0 0 15px;
+
+    }
   }
 
 
-  @media only screen and (min-width: 1000px) {
+  @media only screen and (min-width: 1200px) {
 
     .hero img{
-      width: 900px;
+      width: 800px;
     }
 
-
+    .doctorInfo{
+      margin: 3rem 10rem;
+    }
 
   }
