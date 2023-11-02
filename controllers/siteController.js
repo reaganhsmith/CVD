@@ -16,10 +16,16 @@ async function buildTeam(req, res, next){
       })
 } 
 
+async function buildPatient(req, res, next){
+
+    res.render("./patient/index", {
+      })
+} 
 
 module.exports = {
     buildByReview,
-    buildTeam
+    buildTeam,
+    buildPatient
 }
 
 
