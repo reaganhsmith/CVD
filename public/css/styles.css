@@ -17,7 +17,7 @@ h1, h2, h3, h4, h5{
   color: var(--primary-color);
 }
 
-p{
+p, a{
   font-family: var(--font-fam);
   color: var(--primary-color);
 }
@@ -318,6 +318,96 @@ footer img{
   width: 100%;
 }
 
+/*------- PATIENTS PAGE --------*/
+/*------- PATIENTS HERO SECTIONS --------*/
+.pHero{
+  background-color: var(--secondary-color);
+  display: grid;
+  grid-template-columns: .5fr 1fr 1fr;
+  grid-template-rows: 1fr .2fr .2fr;
+  gap: 1rem;
+}
+.heroImg{
+  width: 100%;
+  border-radius: 0 0 50% 50%;
+  grid-column: 2 / span 2;
+  object-fit: cover;
+}
+.pHero h1{
+  grid-column: 1 /span 3;
+  margin: 1rem;
+  font-size: 42px;
+}
+
+.pHero a{
+  color: var(--primary-color);
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 15px;
+  text-align: center;
+  background-color: transparent;
+  border: solid 2px var(--primary-color);
+  grid-column: 1 /span 2;
+  grid-row: 3 / span 1;
+  height: 10px;
+  width: 120px;
+  margin-left: 2rem;
+
+}
+.pHero a:hover{
+  text-decoration: underline;
+  border-radius: 20px;
+}
+
+.phone{
+  grid-column: 1 /span 2;
+  margin: 1rem;
+  grid-row: 3 / span 1;
+  align-self: self-end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  background-color: var(--light-color);
+  text-align: right;
+  padding: .5rem;
+  width: 200px;
+  border-radius: 50px;
+}
+
+.phone span {
+    font-family: var(--font-fam); 
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: .5rem;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    margin-left: .8rem;
+    text-align: center;
+}
+
+.pHero p{
+  margin: 0;
+  background-color: transparent;
+}
+
+
+
+.patientRev{
+  grid-column: 3 / span 1;
+  grid-row: 3 / span 1;
+  margin: 1rem;
+}
+
+.pHero h2{
+  text-align: left;
+  font-size: 60px;
+  margin: 0;
+}
+
+
+
   /*-------- MEDIA QUERY FOR LAGER SCREEN --------*/
   @media only screen and (min-width: 650px) {
 
@@ -499,6 +589,9 @@ font-size: 18px;
       border-radius:  15px 0 0 15px;
 
     }
+
+    /*------- PATIENTS PAGE --------*/
+/*------- PATIENTS HERO SECTIONS --------*/
   }
 
 
