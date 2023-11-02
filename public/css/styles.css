@@ -1,20 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Lora:wght@400&display=swap');
 
 :root{
   --primary-color: #5e3c2b;
   --secondary-color: #c59e85;
   --light-color: #f4f1f0;
-  --font-fam: 'Lato', sans-serif;;
+  --header-font: 'Lora', serif;
+  --font-fam: 'Lato', sans-serif;
 }
 
 html{
   background-color: var(--light-color);
-  font-family: var(--font-fam);
 }
 
-h1, h2, h3, h4, h5, p{
+h1, h2, h3, h4, h5{
+  font-family: var(--header-font);
   color: var(--primary-color);
 }
+
+p{
+  font-family: var(--font-fam);
+  color: var(--primary-color);
+}
+
+
 
 
 
