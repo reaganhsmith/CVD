@@ -15,6 +15,15 @@ html{
 h1, h2, h3, h4, h5{
   font-family: var(--header-font);
   color: var(--primary-color);
+  font-weight: 400;
+}
+
+h3{
+  font-size: 32px;
+}
+
+h4{
+  font-size: 15px;
 }
 
 p, a{
@@ -406,6 +415,28 @@ footer img{
   margin: 0;
 }
 
+/*------- General & Fam SECTIONS --------*/
+
+.genDentist{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.genDentist img{
+  width: 90%;
+  border-radius: 0 0 0 50%;
+}
+
+.genDentist p{
+  font-size: 18px;
+  text-indent: 3rem;
+}
+
+
+
 
 
   /*-------- MEDIA QUERY FOR LAGER SCREEN --------*/
@@ -625,6 +656,24 @@ font-size: 18px;
   grid-row: 3 / span 1;
 }
 
+/*------- Fam and general Dentist SECTIONS --------*/
+
+.genDentist{
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  margin: 1rem 2rem;
+}
+
+.genDentist img{
+  width: 90%;
+  border-radius: 0 0 0 50%;
+}
+
+.genDentist p{
+  font-size: 18px;
+  text-indent: 3rem;
+}
+
   }
 
 
@@ -639,12 +688,15 @@ font-size: 18px;
     }
 
     .pHero{
-      margin: 1rem 10rem;
-      border-radius: 0 0 270px 0;
+      margin: 1rem 16rem;
     }
     
     .heroImg{
       height: 500px;
+    }
+
+    .genDentist{
+      margin: 0 12rem;
     }
 
   }
