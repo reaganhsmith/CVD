@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Lora:wght@400&display=swap');
 
 :root{
-  --primary-color: #5e3c2b;
-  --secondary-color: #c59e85;
-  --light-color: #f4f1f0;
+  --primary-color: #081f5c;
+  --secondary-color: #D0E3ff;
+  --light-color: #EDF1F6;
   --header-font: 'Lora', serif;
   --font-fam: 'Lato', sans-serif;
 }
@@ -20,10 +20,12 @@ h1, h2, h3, h4, h5{
 
 h3{
   font-size: 32px;
+
 }
 
 h4{
   font-size: 15px;
+
 }
 
 p, a{
@@ -213,12 +215,13 @@ h2{
 }
 
 .indvReview{
-  width: 700px;
-  height: 450px;
+  width: 800px;
+  height: 500px;
   background-color: var(--light-color);
   margin: 1rem;
   padding: 2rem;
 }
+
 
 /*------- Map and contact --------*/
 iframe{
@@ -365,7 +368,6 @@ footer img{
 }
 .pHero a:hover{
   text-decoration: underline;
-  border-radius: 20px;
 }
 
 .phone{
@@ -435,9 +437,56 @@ footer img{
   text-indent: 3rem;
 }
 
+/*------- SERVICE SECTIONS --------*/
+.serve{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--secondary-color);
+  padding: 2rem;
+  margin: 1rem 0;
+  border-radius: 15px;
+  border: solid 2px #c6d9f5;
+  box-shadow: 2px 2px 20px #b4c6e1;
+}
 
+.serve p{
+  margin: 0;
+}
 
+.patServices{
+  margin: 0 2rem;
+}
+/*------- Emergency SECTION --------*/
 
+.denQuote img{
+  display: none;
+}
+.denQuote h4{
+  font-size: 32px;
+}
+
+.emg {
+  position: relative; 
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  margin: 4rem 2rem;
+}
+
+.emg img{
+  width: 100%;
+  height: 500px;
+  padding: 2rem;
+  object-fit: cover;
+}
+
+.emergencies {
+  position: absolute; 
+  top: 0;
+  left: 2rem;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 20px; 
+}
 
   /*-------- MEDIA QUERY FOR LAGER SCREEN --------*/
   @media only screen and (min-width: 650px) {
@@ -658,21 +707,60 @@ font-size: 18px;
 
 /*------- Fam and general Dentist SECTIONS --------*/
 
-.genDentist{
-  display: grid;
-  grid-template-columns: 1.5fr 2fr;
-  margin: 1rem 2rem;
-}
+  .genDentist{
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    margin: 1rem 2rem;
+  }
 
-.genDentist img{
-  width: 90%;
-  border-radius: 0 0 0 50%;
-}
+  .genDentist img{
+    width: 90%;
+    border-radius: 0 0 0 50%;
+  }
 
-.genDentist p{
-  font-size: 18px;
-  text-indent: 3rem;
-}
+  .genDentist p{
+    font-size: 18px;
+    text-indent: 3rem;
+  }
+
+
+  .patServices{
+    margin: 0 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .serve p{
+    font-size: 20px;
+  }
+
+  .serve h4{
+    font-size: 18px;
+  }
+  
+
+  .cosmetic img, .ortho img{
+    display: none;
+  }
+
+  .denQuote img{
+    display: inline;
+    width: 100%;
+  }
+  .denQuote{
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  .denQuote h4{
+    font-size: 24px;
+  }
+
+  .emg{
+    margin: 2rem 6rem;
+  }
 
   }
 
@@ -697,6 +785,25 @@ font-size: 18px;
 
     .genDentist{
       margin: 0 12rem;
+    }
+
+    .patServices{
+      margin: 0 12rem;
+    }
+
+    .emg{
+      margin: 3rem 12rem;
+    }
+
+    .denQuote img{
+      width: 500px;
+    }
+
+    .emg img{
+      width: 100%;
+      height: 400px;
+      padding: 2rem;
+      object-fit: cover;
     }
 
   }
