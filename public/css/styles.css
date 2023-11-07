@@ -292,9 +292,7 @@ footer img{
   overflow: auto;
 }
 
-.aboutDoc::-webkit-scrollbar:vertical {
-  width: 10px;
-}
+
 
 .aboutDoc::-webkit-scrollbar {
   -webkit-appearance: none;
