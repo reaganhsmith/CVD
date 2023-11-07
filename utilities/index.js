@@ -11,7 +11,7 @@ async function seeReviews(req, res, next){
         reviewsSection+= `<img src="/images/stars.png" alt="5 stars" class="dStars">`
         reviewsSection+= `<p> ${row.rating} <p> </div>`
         reviewsSection+= `<p> ${row.review} </p>`
-        reviewsSection+=` <img src="/images/googlereviews.png" alt="google reviews logo"></div>` 
+        reviewsSection+=` <img src="/images/googlereviews.webp" alt="google reviews logo"></div>` 
     });
     reviewsSection += '</div>'
     return reviewsSection
