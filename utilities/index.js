@@ -1,7 +1,8 @@
 const reviewsModel = require("../models/reviews-model")
+const Util = {}
 
-
-async function seeReviews(req, res, next){
+Util.seeReviews = async function (req, res, next) {
+    
     let data =await reviewsModel.getReviews()
     let reviewsSection = `<div class ="review">`
     data.rows.forEach((row) => {
@@ -15,10 +16,12 @@ async function seeReviews(req, res, next){
     });
     reviewsSection += '</div>'
     return reviewsSection
+
 }
 
 
-module.exports = {
-    seeReviews
-}
+
+Util.handleErrors = fn => (req, res, next) => Promise.resolve(fn(req, res, next)).catch(next)
+
+  module.exports = Util
 

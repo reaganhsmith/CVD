@@ -12,6 +12,7 @@ const app = express()
 const static = require("./routes/static")
 const siteController = require("./controllers/siteController")
 const messageRoutes = require("./routes/messageRoutes")
+const utilities = require('./utilities')
 
 
 /* ***********************
@@ -27,11 +28,11 @@ app.set("layout", "./layouts/layout")
  *************************/
 app.use(static)
 
-app.get("/", siteController.buildByReview)
+app.get("/", utilities.handleErrors(siteController.buildByReview))
 
-app.get("/team", siteController.buildTeam)
+app.get("/team", utilities.handleErrors(siteController.buildTeam))
 
-app.get("/services", siteController.buildService)
+app.get("/services", utilities.handleErrors(siteController.buildService))
 
 app.use("/schedule", messageRoutes)
 /* ***********************
