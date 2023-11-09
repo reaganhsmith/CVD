@@ -491,6 +491,64 @@ footer img{
   padding: 20px; 
 }
 
+
+/*------- SCHEDULE FORM --------*/
+
+form{
+  color: var(--primary-color);
+  padding: 2rem;
+}
+form label{
+  font-family: var(--header-font);
+  margin-top: 2rem;
+
+}
+
+form input{
+  margin: .5rem 0;
+  border: solid 2px #ced5dd;
+  padding: .5rem;
+}
+
+fieldset{
+  padding: .5rem;
+  border: none;
+}
+
+textarea{
+  width: 100%;
+  padding: .7rem;
+  border: solid 2px #ced5dd;
+}
+
+input[type="radio"]{
+  margin: 1rem;
+}
+
+select{
+  padding: .5rem;
+  border: solid 2px #ced5dd;
+}
+
+input:required{
+  border-left: solid 3px rgb(192, 61, 61);
+}
+
+input:required:valid{
+  border-left: solid 3px rgb(142, 211, 168);
+}
+
+.submitBtn{
+  background-color: transparent;
+  border: solid 2px var(--primary-color);
+  padding: .5rem;
+  font-size: 15px;
+}
+
+.submitBtn:hover{
+  text-decoration: underline;
+}
+
   /*-------- MEDIA QUERY FOR LAGER SCREEN --------*/
   @media only screen and (min-width: 650px) {
 
@@ -765,6 +823,11 @@ font-size: 18px;
     margin: 2rem 6rem;
   }
 
+  form{
+    margin: 0 8rem;
+  }
+
+
   }
 
 
@@ -807,6 +870,10 @@ font-size: 18px;
       height: 400px;
       padding: 2rem;
       object-fit: cover;
+    }
+
+    form{
+      margin: 0 18rem;
     }
 
   }
