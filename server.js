@@ -11,6 +11,7 @@ const env = require("dotenv").config()
 const app = express()
 const static = require("./routes/static")
 const siteController = require("./controllers/siteController")
+const messageRoutes = require("./routes/messageRoutes")
 
 
 /* ***********************
@@ -32,7 +33,7 @@ app.get("/team", siteController.buildTeam)
 
 app.get("/services", siteController.buildService)
 
-app.get("/schedule", siteController.buildSchedule)
+app.use("/schedule", messageRoutes)
 /* ***********************
  * Local Server Information
  * Values from .env (environment) file
