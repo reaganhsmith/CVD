@@ -1,6 +1,4 @@
 const utlities = require("../utilities")
-const reviewMod = require("../models/reviews-model")
-
 
 async function buildByReview(req, res, next){
     const reviews = await utlities.seeReviews()
@@ -16,16 +14,25 @@ async function buildTeam(req, res, next){
       })
 } 
 
-async function buildPatient(req, res, next){
 
-    res.render("./patient/index", {
-      })
+async function buildService(req, res, next){
+
+  res.render("./service/index", {
+    })
 } 
+
+async function buildSchedule(req, res, next){
+
+  res.render("./schedule/index", {
+    })
+} 
+
 
 module.exports = {
     buildByReview,
     buildTeam,
-    buildPatient
+    buildService,
+    buildSchedule
 }
 
 

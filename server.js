@@ -30,8 +30,9 @@ app.get("/", siteController.buildByReview)
 
 app.get("/team", siteController.buildTeam)
 
-app.get("/patients", siteController.buildPatient)
+app.get("/services", siteController.buildService)
 
+app.get("/schedule", siteController.buildSchedule)
 /* ***********************
  * Local Server Information
  * Values from .env (environment) file
