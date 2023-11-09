@@ -413,7 +413,9 @@ footer img{
   grid-row: 3 / span 1;
   margin: 1rem;
 }
-
+.patientRev img{
+  width: 8rem;
+}
 .pHero h2{
   text-align: left;
   font-size: 60px;
@@ -450,6 +452,7 @@ footer img{
   border-radius: 15px;
   border: solid 2px #c6d9f5;
   box-shadow: 2px 2px 20px #b4c6e1;
+  height: 100%;
 }
 
 .serve p{
@@ -458,6 +461,7 @@ footer img{
 
 .patServices{
   margin: 0 2rem;
+  
 }
 /*------- Emergency SECTION --------*/
 
@@ -862,7 +866,7 @@ font-size: 18px;
     }
 
     .denQuote img{
-      width: 500px;
+      width: 400px;
     }
 
     .emg img{
