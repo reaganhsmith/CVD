@@ -1,12 +1,15 @@
-<form action="">
+<p><%= title %></p>
+
+
+<form action="/schedule/sent" method="post">
 <h1> Request an appointment</h1>
 <p>Please note that this form <strong>does not guarantee an appointment.</strong> We will contact you to confirm your appointment. In the event that we are unable to book you for your requested dates, we will contact you to determine a better fit. We look forward to hearing from you!</p>
     <fieldset>
         <label>Are you a current patient:</label><br>
-        <select id="currentPatient" name="currentPatient">
-            <option value="yes" selected>Yes</option>
-            <option value="no">No</option>
-          </select><br>
+        <select id="currentPatient" name="currentPatient" required>
+            <option value="Yes" selected>Yes</option>
+            <option value="No">No</option>
+        </select><br>
         
 
         <label >Patient Name*:</label>
@@ -21,7 +24,7 @@
 
 
         <label>Preferred Day:</label>
-        <select id="day" name="day">
+        <select id="datePicked" name="datePicked">
             <option value="anyDay" selected>No Preference</option>
             <option value="Monday">Monday</option>
             <option value="Tuesday">Tuesday</option>
@@ -32,7 +35,7 @@
      
 
         <label>Preferred Time:</label>
-        <select id="time" name="time">
+        <select id="timePicked" name="timePicked">
             <option value="anytime" selected>Anytime</option>
             <option value="morning">Morning (7am-10am)</option>
             <option value="midday">Midday (10am-1pm)</option>

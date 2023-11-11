@@ -6,6 +6,6 @@ const messageController = require("../controllers/messageController")
 
 router.get("/", utilities.handleErrors(messageController.buildSchedule))
 
-router.post("/sent", )
+router.post("/sent", utilities.handleErrors(messageController.createAppointment))
 // Export both routers
 module.exports = router;
