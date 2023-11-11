@@ -1,17 +1,17 @@
-<form>
+<form action="">
 <h1> Request an appointment</h1>
 <p>Please note that this form <strong>does not guarantee an appointment.</strong> We will contact you to confirm your appointment. In the event that we are unable to book you for your requested dates, we will contact you to determine a better fit. We look forward to hearing from you!</p>
     <fieldset>
         <label>Are you a current patient:</label><br>
-        <input type="radio" id="yes" name="currentPatient" value="Yes">
-        <label for="yes" class="currPatient">Yes</label>
-        <input type="radio" id="no" name="currentPatient" value="No">
-        <label for="no" class="currPatient">No</label><br>
+        <select id="currentPatient" name="currentPatient">
+            <option value="yes" selected>Yes</option>
+            <option value="no">No</option>
+          </select><br>
         
 
         <label >Patient Name*:</label>
-        <input type="text" id="fname" name="fname" placeholder="John" required>
-        <input type="text" id="lname" name="lname" placeholder="Doe" required><br>
+        <input type="text" id="firstName" name="firstName" placeholder="John" required>
+        <input type="text" id="lastName" name="lastName" placeholder="Doe" required><br>
 
         <label for="email">Email*:</label>
         <input type="email" id="email" name="email" placeholder="email@gmail.com" required><br>
@@ -22,7 +22,7 @@
 
         <label>Preferred Day:</label>
         <select id="day" name="day">
-            <option value="none" selected>No Preference</option>
+            <option value="anyDay" selected>No Preference</option>
             <option value="Monday">Monday</option>
             <option value="Tuesday">Tuesday</option>
             <option value="Wednesday">Wednesday</option>
@@ -32,20 +32,13 @@
      
 
         <label>Preferred Time:</label>
-        <input type="radio" id="morning" name="time" value="7am-10am">
-        <label for="morning">7am-10am</label>
-
-        <input type="radio" id="midday" name="time" value="10am-12pm">
-        <label for="midday">10am-12pm</label>
-
-        <input type="radio" id="afternoon" name="time" value="12-3pm">
-        <label for="afternoon">12-3pm</label>
-
-        <input type="radio" id="evening" name="time" value="4-7pm">
-        <label for="evening">4-7pm</label>
-
-        <input type="radio" id="anytime" name="time" value="anytime">
-        <label for="anytime">anytime</label><br>
+        <select id="time" name="time">
+            <option value="anytime" selected>Anytime</option>
+            <option value="morning">Morning (7am-10am)</option>
+            <option value="midday">Midday (10am-1pm)</option>
+            <option value="afternoon">Afternoon (1pm-4pm)</option>
+            <option value="evening">Evening (4pm-6pm)</option>
+          </select><br>
 
         <label for="reason">Reason for appointment:</label><br>
         <textarea name="reason" id="reason" rows="5" cols="100"></textarea><br>
