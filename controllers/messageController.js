@@ -24,9 +24,9 @@ async function createAppointment(req, res, next){
   )
 
   if(apptInfo){
-    
+    req.flash("notice", "This is a flash message.")
     res.render("./schedule/index", {
-        title: "Congrats we have got your schedule request",
+        
 
     })
   } else{
