@@ -35,3 +35,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+// Code to show or unshow password
+function showPassword() {
+    var x = document.getElementById("password");
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }
+  }

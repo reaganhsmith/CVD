@@ -12,6 +12,7 @@ const app = express()
 const static = require("./routes/static")
 const siteController = require("./controllers/siteController")
 const messageRoutes = require("./routes/messageRoutes")
+const loginRoutes = require("./routes/loginRoutes")
 const utilities = require('./utilities')
 const session = require("express-session")
 const pool = require('./database/')
@@ -60,7 +61,9 @@ app.get("/team", utilities.handleErrors(siteController.buildTeam))
 
 app.get("/services", utilities.handleErrors(siteController.buildService))
 
-app.use("/schedule", messageRoutes)
+app.use("/schedule", utilities.handleErrors(messageRoutes))
+
+app.use("/account", utilities.handleErrors(loginRoutes))
 /* ***********************
  * Local Server Information
  * Values from .env (environment) file
