@@ -8,6 +8,14 @@ async function createLogin(req, res, next){
   } 
 
 
+
+async function registerAccount(req, res, next){
+
+  res.render("./account/register", {
+    })
+} 
+
   module.exports = {
-    createLogin
+    createLogin,
+    registerAccount
 }
