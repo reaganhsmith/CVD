@@ -12,10 +12,11 @@ const app = express()
 const static = require("./routes/static")
 const siteController = require("./controllers/siteController")
 const messageRoutes = require("./routes/messageRoutes")
-const loginRoutes = require("./routes/loginRoutes")
+const accountRoutes = require("./routes/accountRoutes")
 const utilities = require('./utilities')
 const session = require("express-session")
 const pool = require('./database/')
+const bodyParser = require("body-parser")
 
 
 /* ***********************
@@ -40,6 +41,9 @@ app.use(function(req, res, next){
   next()
 })
 
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended: true}))
+
 
 /* ***********************
  * View Engine and Templates
@@ -63,7 +67,7 @@ app.get("/services", utilities.handleErrors(siteController.buildService))
 
 app.use("/schedule", utilities.handleErrors(messageRoutes))
 
-app.use("/account", utilities.handleErrors(loginRoutes))
+app.use("/account", utilities.handleErrors(accountRoutes))
 /* ***********************
  * Local Server Information
  * Values from .env (environment) file

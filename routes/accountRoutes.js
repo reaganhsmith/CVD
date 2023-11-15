@@ -8,6 +8,8 @@ router.get("/", utilities.handleErrors(loginController.createLogin))
 
 router.get("/login", utilities.handleErrors(loginController.createLogin))
 
-router.get("/register", utilities.handleErrors(loginController.registerAccount))
+router.get("/register", utilities.handleErrors(loginController.createRegistration))
+
+router.post("/created", utilities.handleErrors(loginController.registerAccount))
 
 module.exports = router;
