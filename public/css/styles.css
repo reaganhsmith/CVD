@@ -5,7 +5,7 @@
 :root{
   --primary-color: #2b3a5b;
   --secondary-color: #D0E3ff;
-  --light-color: #EDF1F6;
+  --light-color: #f0f7ff;
   --header-font: 'Lora', serif;
   --font-fam: 'Lato', sans-serif;
 }
@@ -552,6 +552,50 @@ input:required:valid{
 .submitBtn:hover{
   text-decoration: underline;
 }
+
+
+/* SECTION FOR THE LOGIN AND SIGN UP PAGE */
+
+.loginForm input{
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  border-bottom: 3px solid var(--primary-color);
+  font-size: 18px;
+  
+}
+
+
+.loginForm{
+  width: 300px; 
+  margin: 1rem auto; 
+  text-align: center; 
+  background-color: var(--secondary-color);
+  border-radius: 25px;
+  box-shadow: 2px 2px 15px #968783;
+}
+
+.loginForm h1{
+  font-size: 38px;
+}
+
+.loginForm button{
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  font-size: 24px;
+  border: none;
+  padding: .5rem;
+  width: 80%;
+  border-radius: 25px;
+}
+
+.loginForm button:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+
 
   /*-------- MEDIA QUERY FOR LAGER SCREEN --------*/
   @media only screen and (min-width: 650px) {

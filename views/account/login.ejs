@@ -1,0 +1,13 @@
+<%- messages() %>
+    
+<form action="" method="post" class="loginForm">
+        <h1>Login</h1>
+        <fieldset>
+            <input name="username" id="username" type="text" placeholder="username" required><br>
+            <input name="account_password" id="account_password" type="password" placeholder="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required><br>
+            <input type="checkbox" onclick="showPassword()" id="checkPass"> Show Password
+        </fieldset>
+<button type="submit" value="Login">Login</button>
+        <p>No account? <a href="/account/register">Sign-up</a></p>
+    </form>
+    

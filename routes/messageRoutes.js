@@ -4,7 +4,8 @@ const utilities = require('../utilities')
 
 const messageController = require("../controllers/messageController")
 
-router.get("/", messageController.buildSchedule)
+router.get("/", utilities.handleErrors(messageController.buildSchedule))
 
+router.post("/sent", utilities.handleErrors(messageController.createAppointment))
 // Export both routers
 module.exports = router;
