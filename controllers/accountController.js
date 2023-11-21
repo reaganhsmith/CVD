@@ -17,13 +17,13 @@ async function registerAccount(req, res, next){
   if(newUser){
     req.flash("notice", "Account created! Please login")
     res.render("./account/login", {
-        
+        errors: null
 
     })
   } else{
     req.flash("notice", "sorry unable to create account")
     res.status(501).render.render("./account/register", {
-        
+      errors: null 
     })
   }
 } 
@@ -31,14 +31,14 @@ async function registerAccount(req, res, next){
 async function createRegistration(req, res, next){
 
   res.render("./account/register", {
-
+    errors: null
     })
 } 
 
 async function createLogin(req, res, next){
 
   res.render("./account/login", {
-
+    errors: null
     })
 } 
 

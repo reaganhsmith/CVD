@@ -7,6 +7,7 @@ async function buildSchedule(req, res, next){
 
     res.render("./schedule/index", {
         title: null,
+        errors: null
       })
   } 
 
@@ -40,12 +41,14 @@ async function createAppointment(req, res, next){
   if(apptInfo){
     req.flash("notice", "We got your request for an appointment and will get back to you shortly:)")
     res.render("./schedule/index", {
+      errors: null
         
 
     })
   } else{
     req.flash("notice", "sorry unable to send message")
     res.status(501).render.render("./schedule/index", {
+      errors: null
         
     })
   }
