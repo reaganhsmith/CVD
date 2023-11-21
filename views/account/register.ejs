@@ -1,6 +1,15 @@
 <%- messages() %>
-    
-<form action="/account/created" method="post">
+
+<% if (errors) { %>
+    <ul class="notice">
+   <% errors.array().forEach(error => { %>
+     <li><%= error.msg %></li>
+  <%  }) %>
+   </ul>
+  <% } %>
+
+
+<form action="/account/register" method="post">
     <h1>Register</h1>
     <fieldset>
         <label >Patient Name*:</label>
