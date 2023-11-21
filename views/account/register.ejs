@@ -13,15 +13,15 @@
     <h1>Register</h1>
     <fieldset>
         <label >Patient Name*:</label>
-        <input type="text" id="firstName" name="firstName" placeholder="John" required>
-        <input type="text" id="lastName" name="lastName" placeholder="Doe" required><br>
+        <input type="text" id="firstName" name="firstName" placeholder="John" required value="<%= locals.firstName %>">
+        <input type="text" id="lastName" name="lastName" placeholder="Doe" required value="<%= locals.lastName %>"><br>
         <label for="email">Email*:</label>
-        <input type="email" id="account_email" name="account_email" placeholder="email@gmail.com" required><br>
+        <input type="email" id="account_email" name="account_email" placeholder="email@gmail.com" required value="<%= locals.account_email %>"><br>
 
         <label for="phone">Phone Number*:</label>
-        <input type="tel" id="account_phone" name="account_phone" placeholder="### ### ####" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" required><br>
+        <input type="tel" id="account_phone" name="account_phone" placeholder="### ### ####" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" required value="<%= locals.account_phone %>"><br>
         <label for="phone">Birthday*:</label>
-        <input type="tel" id="dob" name="dob" placeholder="YYYY-MM-DD" pattern="\d{4}-\d{2}-\d{2}" required><br>
+        <input type="tel" id="dob" name="dob" placeholder="YYYY-MM-DD" pattern="\d{4}-\d{2}-\d{2}" required value="<%= locals.dob %>"><br>
 
         <label for="account_password">Password*:</label> <br>
         <span> The password should have an upper, lower and a number. It should be 6+ charaters. </span> <br>
