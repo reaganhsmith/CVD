@@ -2,14 +2,14 @@ const express = require("express")
 const router = express.Router() 
 const utilities = require('../utilities')
 
-const loginController = require("../controllers/loginController")
+const accountController = require("../controllers/accountController")
 
-router.get("/", utilities.handleErrors(loginController.createLogin))
+router.get("/", utilities.handleErrors(accountController.createLogin))
 
-router.get("/login", utilities.handleErrors(loginController.createLogin))
+router.get("/login", utilities.handleErrors(accountController.createLogin))
 
-router.get("/register", utilities.handleErrors(loginController.createRegistration))
+router.get("/register", utilities.handleErrors(accountController.createRegistration))
 
-router.post("/created", utilities.handleErrors(loginController.registerAccount))
+router.post("/created", utilities.handleErrors(accountController.registerAccount))
 
 module.exports = router;

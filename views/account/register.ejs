@@ -13,7 +13,11 @@
         <input type="tel" id="account_phone" name="account_phone" placeholder="### ### ####" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" required><br>
         <label for="phone">Birthday*:</label>
         <input type="tel" id="dob" name="dob" placeholder="YYYY-MM-DD" pattern="\d{4}-\d{2}-\d{2}" required><br>
+
+        <label for="account_password">Password*:</label> <br>
+        <span> The password should have an upper, lower and a number. It should be 6+ charaters. </span> <br>
         <input name="account_password" id="account_password" type="password" placeholder="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required><br>
+        
         <input type="checkbox" onclick="showPassword()" id="checkPass"> Show Password <br>
         <input name="password2" id="password2" type="password" placeholder="verify password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required><br>
         <input type="checkbox" onclick="showPassword2()" id="checkPass"> Show Verified Password <br>
