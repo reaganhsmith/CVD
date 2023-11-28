@@ -16,4 +16,14 @@ accountVal.registrationRules(),
 accountVal.checkRegistrationData,
 utilities.handleErrors(accountController.registerAccount))
 
+router.post("/login",
+accountVal.checkLogin(),
+accountVal.checkLoginAccount,
+utilities.handleErrors(accountController.accountLogin) 
+)
+
+
+
+
+
 module.exports = router;

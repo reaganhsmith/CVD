@@ -1,6 +1,7 @@
 const utlities = require(".")
 const {body, validationResult} = require("express-validator")
 const validate = {}
+const accountMod = require('../models/account-model')
 
 
 // VALIDATING THE REGISTRATION 
@@ -20,7 +21,13 @@ validate.registrationRules = () => {
         .trim()
         .isEmail()
         .normalizeEmail()
-        .withMessage("please provide a valid email"),
+        .withMessage("please provide a valid email")
+        .custom(async (account_email) =>{
+            const emailExists = await accountMod.checkEmail(account_email)
+            if(emailExists){
+                throw new Error('Email exists. Please login') 
+            }
+        }),
 
         body("account_phone")
         .trim()
@@ -45,7 +52,7 @@ validate.registrationRules = () => {
     ]
 }
 
-// THIS WILL CHECK OUR VALIDATION ADN RETURN A MESSAGE IF NOT CORRECT
+
 validate.checkRegistrationData = async (req, res, next) => {
     const {firstName, lastName, account_email, account_phone, dob} = req.body
     let errors = []
@@ -63,5 +70,45 @@ validate.checkRegistrationData = async (req, res, next) => {
     }
     next()
 }
+
+validate.checkLogin = () => {
+    return [
+        body("account_email")
+        .trim()
+        .isEmail()
+        .normalizeEmail()
+        .withMessage("please provide a valid email")
+        .custom(async (account_email) =>{
+            const emailExists = await accountMod.checkEmail(account_email)
+            if (!emailExists){
+            throw new Error("Email does not exist. Please try again or create an account")
+            }
+        }),
+        body("account_password")
+        .trim()
+        .isStrongPassword({
+            minLength: 6,
+            minLowercase: 1,
+            minUppercase: 1,
+            minNumbers: 1,
+            minSymbols: 0
+        })
+        .withMessage("Password does not meet requirements")
+    ]
+}
+
+validate.checkLoginAccount = async (req, res, next) => {
+    const {account_email } = req.body
+    let errors = []
+    errors = validationResult(req)
+    if (!errors.isEmpty()) {
+      res.render("account/login", {
+        errors,
+        account_email,
+      })
+      return
+    }
+    next()
+  }
 
 module.exports = validate

@@ -22,7 +22,7 @@ async function registerAccount(req, res, next){
     })
   } else{
     req.flash("notice", "sorry unable to create account")
-    res.status(501).render.render("./account/register", {
+    res.status(501).render("./account/register", {
       errors: null 
     })
   }
@@ -42,8 +42,29 @@ async function createLogin(req, res, next){
     })
 } 
 
+
+async function accountLogin(req, res, next) {
+  const {account_email} = req.body
+
+  const checkEmail = await accountMod.getAccountByEmail(account_email)
+
+  if(checkEmail){
+    req.flash("notice", "Logged in!")
+    res.render("./account/account", {
+        errors: null
+
+    })
+  } else{
+    req.flash("notice", "sorry unable to login, please try again")
+    res.status(501).render("./account/login", {
+      errors: null 
+    })
+  }
+ }
+
   module.exports = {
     createLogin,
     createRegistration,
-    registerAccount
+    registerAccount,
+    accountLogin
 }
