@@ -49,9 +49,10 @@ async function accountLogin(req, res, next) {
   const checkEmail = await accountMod.getAccountByEmail(account_email)
 
   if(checkEmail){
-    req.flash("notice", "Logged in!")
+    req.flash("notice", "Logged in")
     res.render("./account/account", {
-        errors: null
+        errors: null,
+        firstName: checkEmail.firstname
 
     })
   } else{
