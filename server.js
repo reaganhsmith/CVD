@@ -13,10 +13,11 @@ const static = require("./routes/static")
 const siteController = require("./controllers/siteController")
 const messageRoutes = require("./routes/messageRoutes")
 const accountRoutes = require("./routes/accountRoutes")
-const utilities = require('./utilities')
+const utilities = require('./utilities/')
 const session = require("express-session")
 const pool = require('./database/')
 const bodyParser = require("body-parser")
+const cookieParser = require("cookie-parser")
 
 
 /* ***********************
@@ -45,6 +46,9 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 
 
+app.use(cookieParser())
+
+app.use(utilities.checkJWTToken)
 /* ***********************
  * View Engine and Templates
  *************************/

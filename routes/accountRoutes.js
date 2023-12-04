@@ -1,11 +1,11 @@
 const express = require("express")
 const router = express.Router() 
-const utilities = require('../utilities')
+const utilities = require('../utilities/')
 const accountVal = require('../utilities/account-validation')
 
 const accountController = require("../controllers/accountController")
 
-router.get("/", utilities.handleErrors(accountController.createLogin))
+router.get("/", utilities.checkLogin, utilities.handleErrors(accountController.createLogin))
 
 router.get("/login", utilities.handleErrors(accountController.createLogin))
 
