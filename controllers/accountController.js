@@ -64,13 +64,13 @@ async function createLogin(req, res, next){
 async function accountLogin(req, res, next) {
   const {account_email, account_password} = req.body
 
-  const checkEmail = await accountMod.getAccountByEmail(account_email)
+  const accountData = await accountMod.getAccountByEmail(account_email)
 
-  if(checkEmail){
+  if(accountData){
     req.flash("notice", "Logged in")
     res.render("./account/account", {
         errors: null,
-        firstName: checkEmail.firstname
+        firstName: accountData.firstname
 
     })
   } else{
@@ -80,7 +80,7 @@ async function accountLogin(req, res, next) {
     })
   }
   try {
-    if (await bcrypt.compare(account_password, checkEmail.account_password)) {
+    if (await bcrypt.compare(account_password, accountData.account_password)) {
     delete accountData.account_password
     const accessToken = jwt.sign(accountData, process.env.ACCESS_TOKEN_SECRET, { expiresIn: 3600 * 1000 })
     res.cookie("jwt", accessToken, { httpOnly: true, maxAge: 3600 * 1000 })
@@ -91,9 +91,20 @@ async function accountLogin(req, res, next) {
    }
  }
 
+
+ async function messageSystem(req, res, next){
+
+  console.log(res.locals.accountData)
+  res.render("./account/messages", {
+    errors: null
+    })
+} 
+
+
   module.exports = {
     createLogin,
     createRegistration,
     registerAccount,
-    accountLogin
+    accountLogin,
+    messageSystem
 }

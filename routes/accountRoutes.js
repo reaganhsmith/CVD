@@ -22,7 +22,7 @@ accountVal.checkLoginAccount,
 utilities.handleErrors(accountController.accountLogin) 
 )
 
-
+router.get("/messages", utilities.handleErrors(accountController.messageSystem))
 
 
 
