@@ -71,6 +71,8 @@ app.get("/services", utilities.handleErrors(siteController.buildService))
 
 app.use("/schedule", utilities.handleErrors(messageRoutes))
 
+app.use("/contact", utilities.handleErrors(siteController.buildContact))
+
 app.use("/account", utilities.handleErrors(accountRoutes))
 /* ***********************
  * Local Server Information

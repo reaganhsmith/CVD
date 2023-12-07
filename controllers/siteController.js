@@ -16,7 +16,12 @@ async function buildTeam(req, res, next){
       })
 } 
 
+async function buildContact(req, res, next){
 
+  res.render("./contact/contact", {
+    errors: null
+    })
+} 
 async function buildService(req, res, next){
 
   res.render("./service/index", {
@@ -36,7 +41,8 @@ module.exports = {
     buildByReview,
     buildTeam,
     buildService,
-    buildSchedule
+    buildSchedule,
+    buildContact
 }
 
 
